@@ -121,6 +121,11 @@
     [operation start];
     
     //[self downloadFile];
+    UIAlertView* alert;
+    alert = [[UIAlertView alloc] initWithTitle:@"Info" message:contactString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+    [alert release];
+
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
