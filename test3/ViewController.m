@@ -103,6 +103,10 @@
     //[request setDelegate:self];
     //[request startAsynchronous];
     
+    UIAlertView* alert;
+    alert = [[UIAlertView alloc] initWithTitle:@"Info" message:"Test!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+    [alert release];
     
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     httpClient.parameterEncoding = AFFormURLParameterEncoding;
@@ -121,10 +125,6 @@
     [operation start];
     
     //[self downloadFile];
-    UIAlertView* alert;
-    alert = [[UIAlertView alloc] initWithTitle:@"Info" message:contactString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [alert show];
-    [alert release];
 
     
     [super viewDidLoad];
